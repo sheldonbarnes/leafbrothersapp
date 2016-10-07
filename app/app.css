@@ -12,7 +12,15 @@
 Button {
   font-size: 50;
 }
-
+Label {
+  color: #f48942;
+  font-weight: bold;
+}
+Image {
+  height: 76;
+  width: 76;
+  border-radius: 20%;
+}
 .message {
     font-size: 20;
     color: #284848;

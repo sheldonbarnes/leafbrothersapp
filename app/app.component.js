@@ -11,6 +11,14 @@ var AppComponent = (function () {
         TNSPhone.dial("317-550-1117", false);
         console.log('Calling');
     };
+    AppComponent.prototype.smsLeaf = function () {
+        TNSPhone.sms(['317-550-1117'], "Can you pickup my leaves: My address is")
+            .then(function (args) {
+            console.log(JSON.stringify(args));
+        }, function (err) {
+            console.log('Error: ' + err);
+        });
+    };
     Object.defineProperty(AppComponent.prototype, "message", {
         get: function () {
             if (this.counter > 0) {

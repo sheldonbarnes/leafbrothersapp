@@ -14,6 +14,15 @@ export class AppComponent {
       TNSPhone.dial("317-550-1117", false);
       console.log('Calling');
     }
+    public smsLeaf() {
+      TNSPhone.sms(['317-550-1117'], "Can you pickup my leaves: My address is")
+          .then((args) => {
+              console.log(JSON.stringify(args));
+          }, (err) => {
+              console.log('Error: ' + err);
+          })
+    }
+
     public get message(): string {
         if (this.counter > 0) {
             return this.counter + " taps left";
