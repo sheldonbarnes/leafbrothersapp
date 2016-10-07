@@ -1,22 +1,16 @@
-@import '~/css/core.light.css'; 
+@import '~/css/core.light.css';
 
 .font-awesome {
   font-family: "FontAwesome";
-}
-﻿button, label, stack-layout {
-    horizontal-align: center;
-}
-
-button {
-  background-color: #4286f4;
-  color: white;
-  margin-top: 20;
-  font-size: 30;
 }
 
 .title {
     font-size: 30;
     margin: 20;
+}
+
+Button {
+  font-size: 50;
 }
 
 .message {

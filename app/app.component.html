@@ -1,8 +1,12 @@
 <StackLayout>
   <ActionBar title="Leaf Brothers">
-        <ActionItem ios.position="right" text="Text"></ActionItem>
-        <ActionItem ios.position="right" text="Call"></ActionItem>
+        <ActionItem ios.position="left" text="Text"></ActionItem>
+        <ActionItem ios.position="right" text="Call" (tap)="callLeaf()"></ActionItem>
   </ActionBar>
 
-  <Button text="&#xf095; Call" class="font-awesome"></Button>
+<Button text="&#xf095; Call" class="font-awesome btn btn-primary btn-sm" (tap)="callLeaf()"></Button>
+<Button text="&#xf27b; Text" class="font-awesome btn btn-primary btn-sm" (tap)="callLeaf()"></Button>
+<Button text="&#xf10b; Book Online" class="fa fa-2x font-awesome btn btn-primary btn-sm" (tap)="callLeaf()"></Button>
+
+
 </StackLayout>

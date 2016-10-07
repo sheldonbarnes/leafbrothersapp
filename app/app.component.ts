@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import * as TNSPhone from "nativescript-phone";
 
 @Component({
     selector: "my-app",
@@ -7,6 +8,12 @@ import {Component} from "@angular/core";
 export class AppComponent {
     public counter: number = 16;
 
+    public callLeaf() {
+      //var phone = require("nativescript-phone");
+      //phone.dial("317-550-1117", false);
+      TNSPhone.dial("317-550-1117", false);
+      console.log('Calling');
+    }
     public get message(): string {
         if (this.counter > 0) {
             return this.counter + " taps left";
@@ -14,7 +21,7 @@ export class AppComponent {
             return "Hoorraaay! \nYou are ready to start building!";
         }
     }
-    
+
     public onTap() {
         this.counter--;
     }

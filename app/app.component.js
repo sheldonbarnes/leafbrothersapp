@@ -1,9 +1,16 @@
 "use strict";
 var core_1 = require("@angular/core");
+var TNSPhone = require("nativescript-phone");
 var AppComponent = (function () {
     function AppComponent() {
         this.counter = 16;
     }
+    AppComponent.prototype.callLeaf = function () {
+        //var phone = require("nativescript-phone");
+        //phone.dial("317-550-1117", false);
+        TNSPhone.dial("317-550-1117", false);
+        console.log('Calling');
+    };
     Object.defineProperty(AppComponent.prototype, "message", {
         get: function () {
             if (this.counter > 0) {
